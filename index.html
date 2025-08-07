@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A'rchitect</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* Animações suaves para texto e cards */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-gray-900 text-white">
+
+  <!-- Navbar -->
+  <header class="bg-gray-900 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold tracking-wide">Alice</h1>
+      <nav class="space-x-6 text-sm font-medium">
+        <a href="#home" class="hover:text-blue-400 transition">Início</a>
+        <a href="#sobre" class="hover:text-blue-400 transition">Sobre</a>
+        <a href="#galeria" class="hover:text-blue-400 transition">Projetos</a>
+        <a href="#contato" class="hover:text-blue-400 transition">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen bg-cover bg-center flex items-center justify-center relative" 
+           style="background-image: url('https://source.unsplash.com/1600x900/?architecture');">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative bg-white/10 backdrop-blur-lg p-12 rounded-3xl shadow-2xl max-w-2xl text-center">
+      <h2 class="text-5xl font-serif font-semibold text-white mb-4 drop-shadow-lg animate-fadeIn">Website by Alice</h2>
+      <p class="text-xl text-gray-200 italic">Designs arquitetônicos únicos para cada cliente </p>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="py-20 bg-gradient-to-r from-[#0f2b2d] to-[#112f35]">
+    <div class="container mx-auto px-6 max-w-3xl text-center">
+      <div class="bg-white/5 backdrop-blur-lg p-10 rounded-3xl shadow-2xl border border-white/20 fade-up">
+        <h2 class="text-3xl font-bold mb-6 text-white">Sobre</h2>
+        <ul class="text-lg leading-relaxed text-gray-300 list-disc list-inside space-y-2 text-left">
+          <li>Transformo ideias em espaços visuais com  <span class="font-semibold">realismo e precisão.</span>.</li>
+          <li>Serviços de <span class="font-semibold">modelagem 3D e renderização</span> para apresentação precisa e visualmente atrativa de projetos arquitetônicos.</li>
+          <li>Funcionalidades dinâmicas implementadas com <span class="font-semibold">SketchUp e Revit</span>.</li>
+          <li>Integração de <span class="font-semibold">Tawk.to Live Chat</span> para comunicação em tempo real.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria de Projetos -->
+  <section id="galeria" class="py-20 bg-gradient-to-r from-[#0f2b2d] to-[#112f35]">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-[#1e3a5f] mb-12 tracking-wide fade-up">Projetos</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <!-- Projetos Cards -->
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl h-52 flex items-center justify-center shadow-lg border border-white/20 relative group overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-white/40">
+          <span class="text-gray-300 text-lg font-semibold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 absolute">Coming Soon</span>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl h-52 flex items-center justify-center shadow-lg border border-white/20 relative group overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-white/40">
+          <span class="text-gray-300 text-lg font-semibold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 absolute">Coming Soon</span>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl h-52 flex items-center justify-center shadow-lg border border-white/20 relative group overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-white/40">
+          <span class="text-gray-300 text-lg font-semibold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 absolute">Coming Soon</span>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl h-52 flex items-center justify-center shadow-lg border border-white/20 relative group overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-white/40">
+          <span class="text-gray-300 text-lg font-semibold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 absolute">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-20 bg-gradient-to-r from-[#0f2b2d] to-[#112f35]">
+    <div class="container mx-auto px-6 max-w-2xl">
+      <div class="bg-white/5 backdrop-blur-2xl p-12 rounded-3xl shadow-2xl border border-white/20 relative fade-up">
+        <h2 class="text-3xl font-bold text-center mb-10 text-white">Contato</h2>
+        
+        <form action="https://formsubmit.co/Contato.AliceWerneck@gmail.com" method="POST" class="space-y-6">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://suaurl.com/obrigado">
+          
+          <input type="text" name="nome" placeholder="Seu nome" required 
+                 class="w-full p-4 bg-white/10 text-white placeholder-gray-300 border border-white/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"/>
+          
+          <input type="email" name="email" placeholder="Seu e-mail" required
+                 class="w-full p-4 bg-white/10 text-white placeholder-gray-300 border border-white/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"/>
+          
+          <textarea name="mensagem" rows="6" placeholder="Sua mensagem" required
+                    class="w-full p-4 bg-white/10 text-white placeholder-gray-300 border border-white/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"></textarea>
+          
+          <button type="submit" 
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 rounded-2xl shadow-lg transition transform hover:-translate-y-1 hover:shadow-2xl">
+            Enviar Mensagem
+          </button>
+        </form>
+        
+        <div class="flex justify-center gap-6 mt-10 text-2xl">
+          <!-- WhatsApp -->
+          <a href="https://wa.me/SEUNUMERO" target="_blank" class="bg-green-500 p-3 rounded-full shadow-md hover:scale-110 transition" title="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-6 h-6">
+              <path d="M20.52 3.48A11.91 11.91 0 0 0 12 0a11.91 11.91 0 0 0-8.52 3.48A11.91 11.91 0 0 0 0 12c0 2.12.55 4.17 1.59 6L0 24l6.28-1.65a11.94 11.94 0 0 0 5.72 1.45 11.91 11.91 0 0 0 8.52-3.48A11.91 11.91 0 0 0 24 12c0-3.2-1.25-6.2-3.48-8.52zM12 21.3a9.3 9.3 0 0 1-4.72-1.3l-.34-.2-3.73.98 1-3.62-.22-.36A9.35 9.35 0 0 1 2.7 12c0-5.13 4.17-9.3 9.3-9.3S21.3 6.87 21.3 12 17.13 21.3 12 21.3zm5.15-6.77c-.28-.14-1.64-.81-1.9-.9-.26-.1-.45-.14-.64.14-.2.28-.73.9-.9 1.08-.17.18-.34.2-.62.07s-1.2-.44-2.3-1.4a8.57 8.57 0 0 1-1.6-1.98c-.17-.28-.02-.43.13-.57.13-.13.28-.34.42-.5.14-.17.2-.28.3-.45.1-.18.05-.34-.02-.48-.07-.14-.64-1.56-.88-2.15-.23-.56-.47-.48-.64-.5h-.55c-.18 0-.48.07-.73.34-.26.28-1 1-.97 2.44.03 1.43 1 2.8 1.14 2.98.14.18 1.94 3.14 4.74 4.4.66.28 1.17.45 1.57.58.66.2 1.26.17 1.73.1.53-.08 1.64-.67 1.87-1.32.23-.64.23-1.2.16-1.32-.08-.11-.25-.18-.52-.3z"/>
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://instagram.com/Alice_Werneck_" target="_blank" class="bg-pink-500 p-3 rounded-full shadow-md hover:scale-110 transition" title="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-6 h-6">
+              <path d="M7.75 2C4.68 2 2 4.68 2 7.75v8.5C2 19.32 4.68 22 7.75 22h8.5c3.07 0 5.75-2.68 5.75-5.75v-8.5C22 4.68 19.32 2 16.25 2h-8.5zM4 7.75C4 5.68 5.68 4 7.75 4h8.5C18.32 4 20 5.68 20 7.75v8.5c0 2.07-1.68 3.75-3.75 3.75h-8.5C5.68 20 4 18.32 4 16.25v-8.5zm8 2.25a3 3 0 100 6 3 3 0 000-6zm0 2a1 1 0 110 2 1 1 0 010-2zm4.25-4.75a.75.75 0 100 1.5.75.75 0 000-1.5z"/>
+            </svg>
+          </a>
+
+          <!-- E-mail (copiar) -->
+          <button onclick="copiarEmail()" class="bg-blue-600 p-3 rounded-full shadow-md hover:scale-110 transition relative" title="Copiar E-mail">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-6 h-6">
+              <path d="M20 4H4c-1.11 0-2 .89-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            <span id="copiadoMsg" class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-green-400 hidden">Copiado!</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0a1e1f] text-center py-6 text-sm text-gray-400">
+    © 2025 MStorck. Todos os direitos reservados.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Scroll Animation
+    const faders = document.querySelectorAll('.fade-up');
+    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+      entries.forEach(entry => {
+        if(!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => { appearOnScroll.observe(fader); });
+
+    // Copiar email
+    function copiarEmail() {
+      const email = "Contato.AliceWerneck@gmail.com";
+      navigator.clipboard.writeText(email).then(() => {
+        const aviso = document.getElementById("copiadoMsg");
+        aviso.classList.remove("hidden");
+        setTimeout(() => { aviso.classList.add("hidden"); }, 2000);
+      });
+    }
+  </script>
+
+  <!-- Tawk.to Live Chat (visível e com z-index alto) -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5f6e0ddf4704467e89f03af5/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s1.style.zIndex = '999999 !important';
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+
+</body>
+</html>
